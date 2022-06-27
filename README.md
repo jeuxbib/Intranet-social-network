@@ -1,5 +1,5 @@
-# Groupomania
-## Créez un réseau social d’entreprise
+# Angelie
+## Réseau social intranet
 
 ---
 
@@ -13,7 +13,7 @@
 
 ### Pour lancer et tester l'application :
 
-Clonez le repository github: https://github.com/jeuxbib/P7_Colle_Code.git
+Clonez le repository github: https://github.com/jeuxbib/Intranet-social-network.git
 
 #### Back-end
 
@@ -58,4 +58,4 @@ Lancer le server avec la commande
 npm run serve
 ```
 
-2. Le serveur doit fontionner sur http://localhost:8080/# Intranet-social-network
+2. Le serveur doit fontionner sur http://localhost:8080/

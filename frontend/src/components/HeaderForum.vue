@@ -2,10 +2,19 @@
   <header class="header-forum">
     <img src="../assets/Logo-groupomania.png" alt="Logo Groupomania" />
     <nav id="navbar">
-      <img @click="profil" v-if="avatar != ''" :src="avatar" alt="Bouton de profil">
-      <img @click="profil" v-else src="../assets/avatar.png" alt="avatar">
-      <img @click="home" src="../assets/home.webp" alt="Bouton du forum">
-      <img @click="logout" src="../assets/logout.png" alt="Bouton de déconnexion">
+      <img
+        @click="profil"
+        v-if="avatar != ''"
+        :src="avatar"
+        alt="Bouton de profil"
+      />
+      <img @click="profil" v-else src="../assets/avatar.png" alt="avatar" />
+      <img @click="home" src="../assets/home.webp" alt="Bouton du forum" />
+      <img
+        @click="logout"
+        src="../assets/logout.png"
+        alt="Bouton de déconnexion"
+      />
     </nav>
   </header>
 </template>
@@ -15,35 +24,36 @@ export default {
   name: "HeaderForum",
   data() {
     return {
-      avatar: ''
-    }
+      avatar: "",
+    };
   },
   mounted() {
-    const id = localStorage.getItem('userId')
-    this.axios.get(`http://localhost:3000/api/auth/${id}`, {
-      headers: {
-        Authorization: 'Bearer ' + localStorage.getItem('token')
-      }
-    })
-    .then((res) => {
-      console.log(res)
-      this.avatar = res.data.avatar
-    })
-    .catch((err) => {
-      console.log(err)
-    });
+    const id = localStorage.getItem("userId");
+    this.axios
+      .get(`http://localhost:3000/api/auth/${id}`, {
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("token"),
+        },
+      })
+      .then((res) => {
+        console.log(res);
+        this.avatar = res.data.avatar;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   },
   methods: {
     logout() {
       localStorage.clear();
-      this.$router.push('/');
+      this.$router.push("/");
     },
     profil() {
-      this.$router.push('/profil');
+      this.$router.push("/profil");
     },
     home() {
-      this.$router.push('/forum');
-    }
+      this.$router.push("/forum");
+    },
   },
 };
 </script>
@@ -64,12 +74,14 @@ header {
   }
 }
 #navbar {
-  display:flex;
+  display: flex;
   align-items: center;
   height: 30px;
   gap: 15px;
   margin-right: 10px;
-  @media screen and (max-width: 400px) { gap: 5px; }
+  @media screen and (max-width: 400px) {
+    gap: 5px;
+  }
   img {
     width: 30px;
     height: 30px;
