@@ -2,7 +2,7 @@
   "development": {
     "username": "angelie",
     "password": "Azertyui=1@",
-    "database": "angelie",
+    "database": "angelieforum",
     "host": "localhost",
     "dialect": "mysql"
   },
