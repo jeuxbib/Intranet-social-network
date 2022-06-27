@@ -68,10 +68,10 @@ header {
   padding: 10px;
 
   img {
-    width: 150px;
-    height: 27px;
-    object-fit: cover;
-  }
+       width: 50px;
+       height: 40px;
+       object-fit:center;
+    }
 }
 #navbar {
   display: flex;

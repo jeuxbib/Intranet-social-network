@@ -52,7 +52,7 @@ export default {
 <style scoped lang="scss">
 main {
   padding: 5em;
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 450px){
       padding: 5px;
     }
   #hello {
@@ -63,7 +63,7 @@ main {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 25px;
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 450px){
       font-size: 15px;
       padding: 10px;
     }
@@ -79,7 +79,7 @@ main {
       padding: 10px;
       margin: 20px 10px;
       background: white;
-      @media screen and (max-width: 500px){
+      @media screen and (max-width: 450px){
         margin: 5px 5px 20px ;
       }
       #img {
